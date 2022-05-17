@@ -19,8 +19,7 @@ def create_markup(base=None):
 #Вывод сообщения для команд start и help в боте
 @bot.message_handler(commands=['start', 'help'])
 def help(message: telebot.types.Message):
-    text = "Приветствуем Вас! Для начала работы введите команду боту в формате: \n \
-<имя валюты, цену которой он хочет узнать> <имя валюты, в которой надо узнать цену первой валюты> <количество первой валюты>\n \
+    text = f"Приветствуем Вас! Для начала работы нажмите: /convert \n \
 Увидеть список доступных валют: /values"
     bot.send_message(message.chat.id, text) #Отправка сообщения в бот
 
